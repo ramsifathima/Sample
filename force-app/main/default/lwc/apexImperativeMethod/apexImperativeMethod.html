@@ -1,0 +1,14 @@
+<template>
+    <lightning-card title="ApexImperativeMethodTesting">
+        <div class="slds-var-m-around_medium">
+            <p class="slds-var-m-bottom_small">
+                <lightning-button label="Load Contacts" onclick={handleload}></lightning-button>
+            </p>
+            <template if:true={contacts}>
+                <template for:each={contacts} for:item="contacts">
+                    <p key={contact.Id}>{Contact.Name}</p>
+                </template>
+            </template>    
+        </div>
+    </lightning-card>
+</template>

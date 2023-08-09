@@ -1,0 +1,22 @@
+<template>
+    <lightning-card title="Filters" icon-name="standard:calibration">
+        <div class="slds-m-horizontal_medium">
+                <lightning-input
+                    type="search"
+                    value={searchKey}
+                    name="objectList"
+                    placeholder="Search..."
+                    onchange={objectNameChange}
+                    role="combobox"
+                    label="Choose Object">
+                </lightning-input>
+        </div>
+        <br>
+        <div class="slds-m-horizontal_medium">    
+            <lightning-button 
+                label="Confirm" 
+                onclick={navigateToObjectFieldPage}>
+            </lightning-button>
+        </div>
+    </lightning-card>
+</template>

@@ -1,0 +1,35 @@
+<template>
+    <lightning-card title="Reusable Data Table" icon-name="custom:custom67">
+
+        <lightning-layout multiple-rows>
+            <lightning-layout-item size="12" small-device-size="12" medium-device-size="12" large-device-size="12"
+                padding="around-small">
+                <div class="slds-m-horizontal_medium">
+                    <lightning-input value={objectApiNameInputValue} type="Search" placeholder="Enter object API name"
+                        onchange={objectNameChange} label="Search"></lightning-input>
+                    <p class="slds-p-vertical_small">
+                        <lightning-button label="Get Fields List" onclick={handleBtnClick}></lightning-button>
+                    </p>
+                    <template if:true={objectInfo.data}>
+                        <lightning-dual-listbox name="fieldApiName" label="Select Field To Get Informtion" value=""
+                            placeholder="Select Field Api Name" options={fieldOptions} onchange={fieldNameChange}
+                            required>
+                        </lightning-dual-listbox>
+                        <p class="slds-p-vertical_small">
+                            <lightning-button label="Show DataTable" onclick={handleFieldBtnClick}>
+                            </lightning-button>
+                        </p>
+                        <template if:true={fieldInformation}>
+                            <div class="scroller">
+                                <pre>{fieldInformation}</pre>
+                            </div>
+                        </template>
+                    </template>
+                </div>
+            </lightning-layout-item>
+        </lightning-layout>
+    </lightning-card>
+    <template if:true={showTable}>
+        <!-- <c-reusablecustom-list-view object-api-name-input-value={objectApiNameInputValue} field-api-name={fieldApiName}></c-reusablecustom-list-view> -->
+    </template>
+</template>
