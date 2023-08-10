@@ -1,0 +1,9 @@
+<apex:page >
+    <div style="text-align:center;">
+        <h1>
+            Hello Team.. Good Afternoon. <br/>
+            From<br/>
+            {!$User.FirstName}
+        </h1>
+    </div>
+</apex:page>

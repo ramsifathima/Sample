@@ -1,0 +1,6 @@
+<apex:component controller="SampleController">
+  <apex:outputlabel value="Object Name" for="plObj"/>      
+      <apex:selectList value="{!selectedObj}" multiselect="false" id="plObj" size="1">
+      <apex:selectOptions value="{!ObjList}"/>
+  </apex:selectList>
+</apex:component>
